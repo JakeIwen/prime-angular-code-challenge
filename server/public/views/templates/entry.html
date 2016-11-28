@@ -5,7 +5,8 @@
       <tr>
         <th>Persona</th>
         <th>Alias</th>
-        <th>Power ID</th>
+        <th>SuperpowerPower</th>
+        <th/>
         <th/>
       </tr>
       <tr>
@@ -14,7 +15,7 @@
           <td><input ng-model="entry.newHero.alias"/></td>
           <td>
             <select ng-options="powers.name for powers in entry.powers " ng-model="entry.newHero.power_id"> Choose Genre
-              <option ng-model="powers.id" ng-value="powers.id"></option>
+              <option ng-model="power.id" ng-value="powers.id"></option>
             </select>
           <td>
             <button type="submit" class="btn" ng-click="entry.addHero()"/>Submit Superhero</button>

@@ -74,5 +74,15 @@ app.controller("ListController", ["$http", function($http) {
       });
   }
 
+  self.updateHero = function(heroObj) {
+    var id = heroObj.id;
+    console.log('update hero: ', heroObj);
+    $http.put('/heroes/' + id, heroObj)
+      .then(function(response) {
+        console.log('UPDATE finished. Get heroes again.');
+        getHeroes();
+      });
+  }
+
 
 }]);

@@ -1,0 +1,26 @@
+<section ng-model="entry">
+  <div id="container" >
+    <h2>Add a new superhero</h2>
+    <table class="table" >
+      <tr>
+        <th>Persona</th>
+        <th>Alias</th>
+        <th>Power ID</th>
+        <th/>
+      </tr>
+      <tr>
+        <form>
+          <td><input ng-model="entry.newHero.persona"/></td>
+          <td><input ng-model="entry.newHero.alias"/></td>
+          <td>
+            <select ng-options="powers.name for powers in entry.powers " ng-model="entry.newHero.power_id"> Choose Genre
+              <option ng-model="powers.id" ng-value="powers.id"></option>
+            </select>
+          <td>
+            <button type="submit" class="btn" ng-click="entry.addHero()"/>Submit Superhero</button>
+          </td>
+        </form>
+      </tr>
+    </table>
+  </div>
+</section>

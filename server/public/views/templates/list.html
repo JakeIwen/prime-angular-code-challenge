@@ -1,0 +1,22 @@
+<section ng-model="list">
+  <div id="container" >
+    <h2>Heroes List</h2>
+
+    <table class="table" >
+      <tr>
+        <th>Persona</th>
+        <th>Alias</th>
+        <th>Superpower</th>
+        <th>Superpower Description</th>
+
+      </tr>
+      <tr ng-repeat="hero in list.heroes">
+        <td>{{hero.persona}}</td>
+        <td>{{hero.alias}}</td>
+        <td>{{hero.name}}</td>
+        <td>{{hero.description}}</td>
+        <td>
+          <button type="submit" class="btn" ng-click="list.deleteHero(hero)">DELETE</button>
+        </td>
+      </tr>
+    </table>
